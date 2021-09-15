@@ -12,7 +12,7 @@ var leftSide,rightSide;
 var bridgeHolder,bridgeHolder1;
 var bridge;
 var jointPoint,jointLink;
-
+var stones= [];
 
 function setup() {
   createCanvas(500,700);
@@ -25,7 +25,7 @@ function setup() {
   rightSide=new Base(490,350,20,700);
   bridgeHolder=new Base(20,350,150,70);
   bridgeHolder1=new Base(480,350,150,70);
-  bridge=new Bridge(9,{x:70,y:340});
+  bridge=new Bridge(8,{x:70,y:340});
   jointPoint=new Base(405,350,10,70);
 
   Matter.Composite.add(bridge.body,jointPoint);
@@ -44,5 +44,12 @@ function draw() {
   bridgeHolder1.show();
   bridge.show();
   jointPoint.show();
+
+  for (var i=0;i <= 8; i++){
+    var x=random(width/2-200,width/2+300);
+    var y=random(-10,140);
+    var stone=new Stone(x,y,80,80);
+    stones.push(stone);
+  }
 
 }
