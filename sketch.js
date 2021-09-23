@@ -15,7 +15,7 @@ var jointPoint,jointLink;
 var stones= [];
 
 function setup() {
-  createCanvas(500,700);
+  createCanvas(windowWidth,windowHeight);
   engine = Engine.create();
   world = engine.world;
   frameRate(80);
@@ -25,7 +25,7 @@ function setup() {
   rightSide=new Base(490,350,20,700);
   bridgeHolder=new Base(20,350,150,70);
   bridgeHolder1=new Base(480,350,150,70);
-  bridge=new Bridge(8,{x:70,y:340});
+  bridge=new Bridge(9,{x:70,y:340});
   jointPoint=new Base(405,350,10,70);
 
   Matter.Composite.add(bridge.body,jointPoint);
