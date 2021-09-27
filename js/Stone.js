@@ -17,5 +17,7 @@ class Stone {
         translate(pos.x, pos.y);
         rotate(angle);
         pop();
+
+        ellipse(0,0,80,80);
 }
 }
