@@ -14,10 +14,9 @@ class Stone {
         var angle = this.body.angle;
         var pos = this.body.position;
         push();
+        ellipse(0,0,80,80);
         translate(pos.x, pos.y);
         rotate(angle);
         pop();
-
-        ellipse(0,0,80,80);
 }
 }
